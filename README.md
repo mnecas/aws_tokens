@@ -41,6 +41,11 @@ user_prefix="infra"
 # Slack config
 webhook_url = "https://hooks.slack.com/TXXXXX/BXXXXX/XXXXXXXXXX"
 ```
+
+## User permission policies
+To use the terraform module you need to have a user/group/role with following policies:
+[policies.json](./policies.json)
+
 ## Deployment
 
 ```bash
