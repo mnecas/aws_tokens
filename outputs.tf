@@ -11,3 +11,9 @@ output "honeytokens_access_keys" {
   ]
   sensitive = true
 }
+
+resource "local_file" "output_key_files" {
+  for_each       = aws_iam_user.honeytokens_users
+  content        = "Access key ID,Secret access key\n${aws_iam_access_key.honeytokens_keys[each.value.name].id},${aws_iam_access_key.honeytokens_keys[each.value.name].secret}"
+  filename       = "output/${each.key}.csv"
+}
