@@ -27,6 +27,8 @@
 				"iam:DetachRolePolicy",
 				"cloudtrail:AddTags",
 				"iam:ListAttachedRolePolicies",
+				"lambda:UpdateFunctionCode",
+				"lambda:PublishVersion",
 				"cloudtrail:ListTags",
 				"s3:PutLifecycleConfiguration",
 				"lambda:DeleteFunction",

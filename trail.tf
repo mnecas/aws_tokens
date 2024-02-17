@@ -66,6 +66,7 @@ resource "aws_s3_bucket_policy" "honeytokens_bucket_policy" {
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "bucket-config" {
+  depends_on = [aws_s3_bucket.honeytokens_bucket]
   bucket = aws_s3_bucket.honeytokens_bucket.id
 
   rule {
