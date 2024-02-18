@@ -15,4 +15,7 @@ variable "webhook_url" {
   default = "https://hooks.slack.com/TXXXXX/BXXXXX/XXXXXXXXXX"
 }
 
-
+variable "slack_report" {
+  type    = string
+  default = ""
+}

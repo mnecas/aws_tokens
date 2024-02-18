@@ -28,6 +28,7 @@ The variable file contains the users with their names and the `user_prefix`.
 <b>Warning the user names and user paths are visible to the attacker.</b>
 Each has tags which can give more information to the administrator about the location
 of the triggered token.
+
 ```
 users = {
   admin-user1 = {
@@ -40,6 +41,15 @@ user_prefix="infra"
 
 # Slack config
 webhook_url = "https://hooks.slack.com/TXXXXX/BXXXXX/XXXXXXXXXX"
+
+# Configuration of the report string
+slack_report = "This is custom message triggered by \"*{service_account}*\"."
+
+# Possible variables with which you can structure the slack report msg:
+# - service_account
+# - labels_string
+# - caller_ip
+# - method
 ```
 
 ## User permission policies

@@ -22,7 +22,8 @@ module "lambda_function" {
 
   environment_variables = {
     USER_PATH   = var.user_prefix,
-    WEBHOOK_URL = var.webhook_url
+    WEBHOOK_URL = var.webhook_url,
+    SLACK_REPORT = var.slack_report
     # RECIPIENT = var.recepient,
     # SENDER = var.sender,
     # REGION = data.aws_region.current.name
