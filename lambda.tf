@@ -24,9 +24,6 @@ module "lambda_function" {
     USER_PATH   = var.user_prefix,
     WEBHOOK_URL = var.webhook_url,
     SLACK_REPORT = var.slack_report
-    # RECIPIENT = var.recepient,
-    # SENDER = var.sender,
-    # REGION = data.aws_region.current.name
   }
   assume_role_policy_statements = {
     assume_role = {
@@ -54,14 +51,6 @@ module "lambda_function" {
       effect = "Allow"
       actions = [
         "iam:ListUserTags",
-      ]
-      resources = ["*"]
-    }
-    ses_send_email = {
-      effect = "Allow"
-      actions = [
-        "ses:SendEmail",
-        "ses:SendRawEmail"
       ]
       resources = ["*"]
     }
